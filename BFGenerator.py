@@ -3,7 +3,7 @@ class BFGenerator(object):
        prints the original string to the brainfuck interpreter standard
        output"""
       
-    def text2BF(self, data):
+    def text_to_brainfuck(self, data):
         """Converts a string into a BF program. Returns the BF code"""
         glyphs = len(set([c for c in data]))
         number_of_bins = max(max([ord(c) for c in data]) // glyphs,1)
@@ -48,4 +48,4 @@ class BFGenerator(object):
 
 if __name__=="__main__":
     bfg=BFGenerator()
-    print(bfg.text2BF(input("Set text>")))
+    print(bfg.text_to_brainfuck(input("Set text>")))
